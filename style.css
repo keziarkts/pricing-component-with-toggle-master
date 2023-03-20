@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+:root {
+    /* PRIMARY COLORS */
+    --clr-linear-grad-1: hsl(236, 72%, 79%);
+    --clr-linear-grad-2: hsl(237, 63%, 64%);
+
+    /* NEUTRAL COLORS */
+    --clr-very-light-grayish-blue: hsl(240, 78%, 98%);
+    --clr-light-grayish-blue: hsl(234, 14%, 74%);
+    --clr-grayish-blue: hsl(233, 13%, 49%);
+    --clr-dark-grayish-blue: hsl(232, 13%, 33%);
+
+    /* FONT SIZE */
+    --fs-body: 	0.9375rem; /*15px*/
+    --fs-default: 1rem; /*16px*/
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--clr-very-light-grayish-blue);
+    background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right top , left bottom;
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.all-content {
+    margin: 50px;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+}
+.header-big-title {
+    color: var(--clr-grayish-blue);
+    font-size: 2rem;
+}
+.header-subtitle {
+    color: var(--clr-light-grayish-blue);
+    font-size: var(--fs-body);
+}
+.toggle-master {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 28px;
+    margin: 35px 0;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    display: flex;
+    align-items: center;
+}
+
+.basic-section, .pro-section, .master-section {
+    text-align: center;
+}
+.plan-title {
+    font-size: var(--fs-default); 
+    margin-bottom: 22px;
+}
+.monthly-price, .annually-price {
+    font-size: 3.5rem;
+}
+.dollar-sign {
+    font-size: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(.25turn, var(--clr-linear-grad-1), 10%, var(--clr-linear-grad-2));
+    border-radius: 8px;
+    border: none;
+    margin-top: 10px;
+    padding: 14px 32px;
+    width: 100%;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    color: var(--clr-very-light-grayish-blue);
+    letter-spacing: 0.1rem;
+}
+.pro-section .btn {
+    background: white;
+    color: var(--clr-linear-grad-2);
+}
+.btn:hover {
+    cursor: pointer;
+    border: 1px solid var(--clr-linear-grad-2);
+    background: transparent;
+    color: var(--clr-linear-grad-2);
+}
+.pro-section .btn:hover {
+    cursor: pointer;
+    border: 1px solid white;
+    background: transparent;
+    color: var(--clr-very-light-grayish-blue);
+}
+
+/* basic section */
+.basic-section {
+    min-width: 350px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 35px;
+    font-size: var(--fs-body);
+}
+.basic-section .plan-title {
+    color: var(--clr-grayish-blue);
+}
+.basic-section .monthly-price,
+.basic-section .annually-price {
+    color: var(--clr-dark-grayish-blue);
+}
+.basic-features-list {
+    list-style-type: none;
+    margin: 22px 0;
+}
+.basic-features-list li {
+    margin: 15px 0;
+    color: var(--clr-grayish-blue);
+    font-size: 0.85rem;
+}
+.basic-features-list .line {
+    border-color: hsla(234, 14%, 74%, 0.2);
+}
+
+/* pro section */
+.pro-section {
+    min-width: 350px;
+    background: linear-gradient(.25turn, var(--clr-linear-grad-1), 10%, var(--clr-linear-grad-2));
+    border-radius: 8px;
+    padding: 55px 35px;
+    font-size: var(--fs-body);
+}
+.pro-section .plan-title {
+    color: var(--clr-very-light-grayish-blue);
+}
+.pro-section .monthly-price,
+.pro-section .annually-price {
+    color: var(--clr-very-light-grayish-blue);
+}
+.pro-features-list {
+    list-style-type: none;
+    margin: 22px 0;
+}
+.pro-features-list li {
+    margin: 15px 0;
+    color: var(--clr-very-light-grayish-blue);
+    font-size: 0.85rem;
+}
+.pro-features-list .line {
+    border-color:  hsla(240, 78%, 98%, 0.4);
+}
+
+/* master section */
+.master-section {
+    min-width: 350px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    font-size: var(--fs-body);
+}
+.master-section .plan-title {
+    color: var(--clr-grayish-blue);
+}
+.master-section .monthly-price,
+.master-section .annually-price {
+    color: var(--clr-dark-grayish-blue);
+}
+.master-features-list {
+    list-style-type: none;
+    margin: 22px 0;
+}
+.master-features-list li {
+    margin: 15px 0;
+    color: var(--clr-grayish-blue);
+    font-size: 0.85rem;
+}
+.master-features-list .line {
+    border-color: hsla(234, 14%, 74%, 0.2);
+}
+
+/* TOGGLE PART */
+.toggle {
+    position: relative;
+    width: 50px;
+    height: 28px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(.25turn, var(--clr-linear-grad-1), 10%, var(--clr-linear-grad-2));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.toggle:hover {
+    opacity: 0.5;
+}
+
+.circle {
+    margin: 4px;
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: white;
+    transition: .3s;
+}
+
+.active {
+    background-color: var(--clr-light-grayish-blue);
+}
+.active .circle {
+    left: 100%;
+    transform: translateX(-100%);
+    transition: .3s;
+    background-color: white;
+    margin: -4px;
+}
+
+/* show-hide monthly or annually price: */
+.basic-monthly-price,
+.pro-monthly-price,
+.master-monthly-price {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.basic-annually-price,
+.pro-annually-price,
+.master-annually-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+
+/*********** 
+    MOBILE -- MEDIA QUERIES 
+                    ************/
+@media(max-width: 850px) {
+    body {
+        background-image: url(images/bg-top.svg);
+        background-repeat: no-repeat;
+        background-position: 100% 0%;
+        background-position-x: 210px;
+        background-position-y: -40px;
+    }
+    .main-content {
+        display: block;
+        margin-top: 70px;
+    }
+    .basic-section,
+    .pro-section,
+    .master-section {
+        margin-top: 35px;
+    }
+    .plan-title {
+        font-size: 1.25rem; 
+        margin-bottom: 22px;
+    }
+    .monthly-price, .annually-price {
+        font-size: 4.3rem;
+    }
+    .dollar-sign {
+        font-size: 2.5rem;
+    }
+    .basic-features-list li,
+    .pro-features-list li,
+    .master-features-list li {
+        font-size: 0.95rem;
+    }
+    .btn {
+        font-size: 0.8rem;
+    }
+}
